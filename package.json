@@ -1,6 +1,7 @@
 {
   "name": "runtrack",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
@@ -13,6 +14,9 @@
     "db:up": "docker compose up -d",
     "db:down": "docker compose down",
     "db:logs": "docker compose logs -f postgres"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["argon2", "esbuild"]
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
